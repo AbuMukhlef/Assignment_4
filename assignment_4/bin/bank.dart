@@ -1,0 +1,15 @@
+export 'account/account_details.dart';
+export 'client/client_details.dart';
+export 'about_bank/bank_details.dart';
+export './save_file.dart';
+export 'client/add_client.dart';
+export 'client/update_client.dart';
+export 'client/delete_client.dart';
+export './main_dashboard.dart';
+export 'account/add_account.dart';
+export 'account/update_account.dart';
+export 'account/delete_account.dart';
+export 'account/search_account.dart';
+export 'account/account_function.dart';
+export 'account/account_deposit.dart';
+export 'account/account_withdrawal.dart';
