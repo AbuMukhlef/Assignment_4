@@ -16,7 +16,7 @@ accountWithdrawal() {
       '\nYou can withdraw bigger than 50 at a time otherwise it will be rejected by the bank');
   print('\nEnter Withdrawal Amount');
   int amount = int.parse(stdin.readLineSync()!);
-  if (amount <= 50) {
+  if (amount < 50) {
     print('Invalid Withdrawal');
     exit(0);
   } else {
