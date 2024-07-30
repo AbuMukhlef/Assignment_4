@@ -9,7 +9,7 @@ addAccount() {
   print('***you have 500 RS to open an account***');
   print('Enter your balance');
   int balance = int.parse(stdin.readLineSync()!);
-  if (balance > 500) {
+  if (balance >= 500) {
     print('Generating Account Number...');
     id = Random().nextInt(9999);
     print('Enter your Account Holder');
