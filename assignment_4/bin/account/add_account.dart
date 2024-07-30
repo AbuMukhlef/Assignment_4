@@ -2,15 +2,23 @@ import 'dart:io';
 import 'dart:math';
 import '../bank.dart';
 
-addAccount(){
-  print('\nEnter Account Details');
-  print('Generating Account Number...');
-  int id = Random().nextInt(9999);
-  print('Enter your Account Holder');
-  String name = stdin.readLineSync()!;
+addAccount() {
+  String name, dateCreated;
+  int id;
+  print('\nEnter Account Details\n');
+  print('***you have 500 RS to open an account***');
   print('Enter your balance');
   int balance = int.parse(stdin.readLineSync()!);
-  String dateCreated = DateTime.now().toString();
+  if (balance > 500) {
+    print('Generating Account Number...');
+    id = Random().nextInt(9999);
+    print('Enter your Account Holder');
+    name = stdin.readLineSync()!;
+    dateCreated = DateTime.now().toString();
+  } else {
+    print('Invalid Balance');
+    exit(0);
+  }
 
   Map<String, dynamic> account = {
     'id': id,
@@ -21,7 +29,8 @@ addAccount(){
   dataForAccount.add(account);
   print(dataForAccount);
 
-  print('\nClient Added Successfully\nif you want to add another client press 1 or 2 to go back to dashboard Account\nany other key to exit');
+  print(
+      '\nClient Added Successfully\nif you want to add another client press 1 or 2 to go back to dashboard Account\nany other key to exit');
   int option = int.parse(stdin.readLineSync()!);
   switch (option) {
     case 1:
@@ -34,4 +43,3 @@ addAccount(){
       exit(0);
   }
 }
-
